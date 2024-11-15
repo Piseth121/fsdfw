@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supplier Portal - Add New Product</title>
+ lin
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Supplier Portal</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#add-product">Add Product</a></li>
+      <li><a href="#product-list">Product List</a></li>
+      <li><a href="#account">Account Settings</a></li>
+      <li><a href="#support">Support</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="add-product">
+      <h2>Add New Product</h2>
+      <form id="product-form" onsubmit="return addProduct()">
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" name="product-name" required>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <button type="submit">Add Product</button>
+      </form>
+    </section>
+
+    <section id="product-list">
+      <h2>Product List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody id="product-table-body">
+          <!-- Product rows will be added dynamically here -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="account">
+      <h2>Account Settings</h2>
+      <!-- Account management form goes here -->
+    </section>
+
+    <section id="support">
+      <h2>Support</h2>
+      <!-- Support contact info goes here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Supplier Portal</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
